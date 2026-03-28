@@ -22,7 +22,7 @@ async function getKey() {
     return key;
   } catch (error) {
     console.error("Didn't get the key", error);
-    return null;
+    
   }
 }
 
@@ -33,6 +33,7 @@ async function makeRequest(options) {
     const res = await fetch(url, options);
 
     const data = await res.json();
+    console.log(data.result.response)
     return data;
   } catch (error) {}
 }
@@ -53,7 +54,7 @@ function renderChat(text, type) {
   p.textContent = text;
 
   if (type === "user") {
-    p.className = "p-2 border max-w-[70%] rounded bg-orange-600 text-white self-end ";
+    p.className = "p-2 border max-w-[70%] rounded bg-orange-600 text-white self-end";
   } else {
     p.className = "p-2  border rounded max-w-[70%] bg-yellow-700 text-white self-start";
   }
@@ -66,8 +67,9 @@ form.addEventListener("submit", async (e) => {
 
   const userInput = input.value;
   
-  if (!userInput) return;
-
+  if (!userInput) {
+    return;
+  } 
   //*added render user response
   renderChat(userInput, "user");
 
