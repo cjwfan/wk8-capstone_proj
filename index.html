@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Cookies</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-yellow-200">
+
+    <header class="p-4 text-center">
+    <h1 class="text-3xl">Cottage Cookies</h1>
+    <nav>
+      <ul class="mt-4 flex justify-evenly">
+      <li><a href="#home" class="hover: underline">Home</a></li>
+      <li><a href="#about" class="hover: underline">About Us</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <img class="w-full max-w-md mx-auto" src="cottage.jpg" alt="cottage in the middle of a forest">
+    
+    <main class="mt-auto">
+      <section class="ml-4">
+        <h2 id="about" class="text-xl text-center p-4">About Us</h2>
+        <p>
+          We're a small shop with a big love for baking cookies! We started 25 years ago baking only our special chocolate chip cookies in a small, country kitchen. As word of mouth grew, so did our business. We now have a variety of flavors and can cater to some dietary requirements, such as gluten free, with more coming soon.  
+        </p>
+        
+      </section>
+
+      <!-- ChatBot Area -->
+      <div id="chatbot" class="mt-auto flex justify-end p-4">
+
+   <div class="w-full max-w-sm">
+
+    <!-- OUTPUT -->
+    <div
+      id="output"
+      class="p-4 flex flex-col border rounded-xl h-90 overflow-y-auto space-y-3 bg-white shadow-lg"></div>
+
+    <!-- FORM -->
+    <form id="form" class="flex">
+      <input
+        type="text"
+        id="input"
+        class="flex-1 p-2 border bg-white rounded-lg"
+      />
+      <button class="p-2 border rounded-lg bg-amber-400">
+        Send
+      </button>
+    </form>
+
+  </div>
+
+</div>
+
+  
+  </body>
+</html>
